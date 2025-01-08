@@ -1,3 +1,9 @@
 body {
   margin: 0;
 }
+
+@import 'blocks/variables';
+@import 'blocks/moyo-header';
+@import 'blocks/card';
+@import 'blocks/stars';
+
