@@ -5,6 +5,13 @@ body {
   font-style: normal;
 }
 
+.conteiner {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 46px 48px;
+  padding: 40px 50px;
+}
+
 .card {
   box-sizing: border-box;
   width: 200px;
@@ -13,6 +20,8 @@ body {
   display: flex;
   flex-direction: column;
   padding: $card-padding;
+
+  transition-duration: 300ms;
 
   &__img {
     padding: 0 3px;
@@ -101,4 +110,17 @@ body {
     background-color: #fff;
     color: $main-button-color;
   }
+}
+
+.card:hover {
+  transform: scale(120%);
+}
+
+.card:hover .card__header {
+  color: #34568b;
+}
+
+.card__button:hover {
+  background-color: #fff;
+  color: #00acdc;
 }
