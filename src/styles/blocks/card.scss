@@ -5,9 +5,9 @@ body {
   font-style: normal;
 }
 
-.conteiner {
+.container {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(1, 200px);
   gap: 46px 48px;
   padding: 40px 50px;
 }
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   padding: $card-padding;
 
-  transition-duration: 300ms;
+  transition: $transition;
 
   &__img {
     padding: 0 3px;
@@ -103,6 +103,7 @@ body {
     font-weight: 700;
     color: #fff;
     text-decoration: none;
+    transition: $transition;
   }
 
   &__button:active {
@@ -123,4 +124,22 @@ body {
 .card__button:hover {
   background-color: #fff;
   color: #00acdc;
+}
+
+@media (min-width: 488px) {
+  .container {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    grid-template-columns: repeat(4, 200px);
+  }
 }
